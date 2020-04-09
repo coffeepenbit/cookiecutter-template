@@ -1,0 +1,11 @@
+{
+    "package_name": "foo",
+    "description": "Foo",
+    "project_url": "https://example.com",
+    "author": "Foo Bar",
+    "email": "foo.bar@example.com",
+    "maintainer": "Foo Bar",
+    "install_dev_packages": ["yes", "no"],
+    "run_python_tests": ["yes", "no"],
+    "git_setup": ["yes", "no"]
+}

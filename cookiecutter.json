@@ -2,7 +2,7 @@
     "package_name": "foo",
     "description": "Foo",
     "author": "Foo Bar",
-    "project_url": "https://github.com/{{ cookiecutter.author|lower|replace(' ', '-') }}/{{ cookiecutter.package_name|lower|replace(' ', '-') }}",
+    "project_url": "https://github.com/{{ cookiecutter.author|lower|replace(' ', '-') }}/{{ cookiecutter.package_name|lower|replace(' ', '-') }}.git",
     "email": "{{ cookiecutter.author|lower|replace(' ', '-') }}@gmail.com",
     "maintainer": "{{ cookiecutter.author }}",
     "install_dev_packages": ["yes", "no"],

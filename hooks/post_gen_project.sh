@@ -11,10 +11,6 @@ function main() {
         install_without_dev_packages
     {% endif %}
 
-    {% if cookiecutter.run_python_tests == "yes" -%}
-        run_python_tests
-    {% endif %}
-
     {% if cookiecutter.git_setup == "yes" -%}
         git_setup
     {% endif %}

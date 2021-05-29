@@ -6,6 +6,5 @@
     "email": "{{ cookiecutter.author|lower|replace(' ', '-') }}@gmail.com",
     "maintainer": "{{ cookiecutter.author }}",
     "install_dev_packages": ["yes", "no"],
-    "run_python_tests": ["yes", "no"],
     "git_setup": ["yes", "no"]
 }

@@ -40,11 +40,6 @@ function install_without_dev_packages() {
 }
 
 
-function run_python_tests() {
-    tox -r -p
-}
-
-
 function git_setup() {
     git init
 

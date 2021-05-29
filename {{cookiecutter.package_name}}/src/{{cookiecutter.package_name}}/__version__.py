@@ -4,4 +4,4 @@ __description__ = "{{cookiecutter.description}}"
 __maintainer__ = '{{cookiecutter.maintainer}}'
 __title__ = '{{cookiecutter.package_name}}'
 __url__ = '{{cookiecutter.project_url}}'
-__version__ = '0.1.0-alpha'
+__version__ = '0.1.0'

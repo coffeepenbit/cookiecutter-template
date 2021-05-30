@@ -3,23 +3,20 @@
 set -e
 
 function main() {
+    {% if cookiecutter.setup_virtual_environment == "yes" -%}
     setup_python_venv
-
-    {% if cookiecutter.install_dev_packages == "yes" -%}
-        install_dev_packages
-    {%- else -%}
-        install_without_dev_packages
+    install_dev_packages
     {% endif %}
+        
 
-    {% if cookiecutter.git_setup == "yes" -%}
-        git_setup
+    {% if cookiecutter.git_initial_commit == "yes" -%}
+    git_initial_commit
     {% endif %}
 }
 
 
 function setup_python_venv() { 
-    # TODO dont hardcore python version
-    python3.8 -m venv .venv
+    python3 -m venv .venv
     source .venv/bin/activate
     python -m pip install --upgrade pip
 }
@@ -31,19 +28,19 @@ function install_dev_packages() {
 }
 
 
-function install_without_dev_packages() {
-    python -m pip install -e .
-}
-
-
-function git_setup() {
+function git_initial_commit() {
     git init
 
     git config --local user.name {{cookiecutter.author}}
     git config --local user.email {{cookiecutter.email}}
 
+    
     git add .
     git commit -m "Initial commit"
+
+    git branch -M main
+    
+    git remote add origin git@github.com:{{cookiecutter.author}}/{{cookiecutter.project_slug}}.git
 }
 
 

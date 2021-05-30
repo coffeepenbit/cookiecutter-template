@@ -1,6 +1,0 @@
-bump2version
-pylint
-pytest
-pytest-cov
-pytest-vcr
-

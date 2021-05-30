@@ -1,10 +1,16 @@
 {
-    "package_name": "foo",
-    "description": "Foo",
-    "author": "Foo Bar",
-    "project_url": "https://github.com/{{ cookiecutter.author|lower|replace(' ', '-') }}/{{ cookiecutter.package_name|lower|replace(' ', '-') }}.git",
-    "email": "{{ cookiecutter.author|lower|replace(' ', '-') }}@gmail.com",
+    "package_name": "Foo Bar",
+    "python_package_description": "Foo is for Bar",
+    "project_slug": "{{ cookiecutter.package_name|lower|replace(' ', '-') }}",
+    "author": "coffeepenbit",
     "maintainer": "{{ cookiecutter.author }}",
-    "install_dev_packages": ["yes", "no"],
-    "git_setup": ["yes", "no"]
+    "email": "{{ cookiecutter.author|lower|replace(' ', '-') }}@gmail.com",
+    "github_username": "coffeepenbit",
+    "pypi_username": "{{ cookiecutter.github_username }}",
+    "project_url": "https://github.com/{{ cookiecutter.author|lower|replace(' ', '-') }}/{{ cookiecutter.project_slug }}",
+    "use_pytest": ["yes", "no"],
+    "use_cli_entry_point": ["yes", "no"],
+    "use_bump2version": ["yes", "no"],
+    "setup_virtual_environment": ["yes", "no"],
+    "git_initial_commit": ["yes", "no"]
 }

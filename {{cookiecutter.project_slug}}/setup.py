@@ -7,7 +7,7 @@ INSTALL_REQUIRES = []
 
 def get_about(here):
     about = {}
-    about_info_path = os.path.join(here, 'src', '{{cookiecutter.package_name}}', '__version__.py')
+    about_info_path = os.path.join(here, 'src', '{{ cookiecutter.project_slug }}', '__version__.py')
     with open(about_info_path,'r', encoding='utf-8' ) as f:
         exec(f.read(), about)
 
@@ -36,5 +36,10 @@ setup(
     packages=find_packages('src'),    
     python_requires='>=3.6',
     url=about['__url__'],
-    version=about['__version__']
+    version=about['__version__'],
+    {% if cookiecutter.use_cli_entry_point == "yes" -%}
+    entry_points = {
+        'console_scripts': ['tcmpy=tcmpy.__main__:main']
+    }
+    {% endif %}
 )

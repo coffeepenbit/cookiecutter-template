@@ -1,9 +1,9 @@
 pylint
 {% if cookiecutter.use_bump2version == "yes" -%}
 bump2version
-{% endif %}
+{% endif -%}
 {% if cookiecutter.use_pytest == "yes" -%}
 pytest
 pytest-cov
 pytest-vcr
-{% endif %}
+{% endif -%}

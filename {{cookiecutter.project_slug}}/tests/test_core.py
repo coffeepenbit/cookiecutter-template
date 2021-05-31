@@ -1,4 +1,4 @@
-from {{cookiecutter.package_name}} import core
+from {{cookiecutter.project_slug}} import core
 
 
 def test_main(capsys):

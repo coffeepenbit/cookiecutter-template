@@ -1,7 +1,7 @@
 import logging
 
 from . import cli
-
+from . import conf
 
 LOGGER = logging.getLogger(__package__)
 LOGGING_FORMAT = "%(levelname)s:%(name)s:%(message)s"
@@ -13,7 +13,7 @@ def main():
 
     LOGGER.info("Launching program")
 
-    conf_settings = utils.get_conf(cli_args.conf_path)
+    conf_settings = conf.get_conf(cli_args.conf_path)
 
     print("Hello, world!")
 

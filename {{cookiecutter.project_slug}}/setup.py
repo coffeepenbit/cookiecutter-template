@@ -39,7 +39,7 @@ setup(
     version=about['__version__'],
     {% if cookiecutter.use_cli_entry_point == "yes" -%}
     entry_points = {
-        'console_scripts': ['tcmpy=tcmpy.__main__:main']
+        'console_scripts': ['{{cookiecutter.project_slug}}={{cookiecutter.project_slug}}.__main__:main']
     }
     {% endif %}
 )
